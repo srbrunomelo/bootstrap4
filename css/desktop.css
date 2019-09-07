@@ -1,0 +1,52 @@
+*{
+    padding:0;
+	margin: 0; 
+	font-size: 100%;  
+	font-family: 'Roboto', sans-serif; color:#333;
+	box-sizing: border-box;
+	color: #333;
+}
+header{
+    background: red;
+}
+
+li{ list-style: none; }
+a{ text-decoration: none; }
+
+
+.container-header{
+    /*
+    display: flex; 
+    flex-direction: row;
+	flex-wrap: wrap;
+	align-items:center;
+    justify-content: space-between;
+    background: black;
+    */
+}
+
+.menu-header{
+
+}
+
+.menu-header ul{ 
+}
+
+
+.menu-header ul li{
+    
+}
+
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { ... }
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { ... }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { ... }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { ... }
