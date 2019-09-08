@@ -1,42 +1,288 @@
-*{
-    padding:0;
-	margin: 0; 
-	font-size: 100%;  
-	font-family: 'Roboto', sans-serif; color:#333;
-	box-sizing: border-box;
-	color: #333;
-}
-header{
-    background: red;
-}
-
+*{  padding:0; margin: 0;  font-size: 100%;   box-sizing: border-box; color: #333; font-family: 'Roboto', sans-serif; }
+body{}
+a:hover{ text-decoration: none; }
 li{ list-style: none; }
 a{ text-decoration: none; }
-
-
-.container-header{
-    /*
-    display: flex; 
-    flex-direction: row;
-	flex-wrap: wrap;
-	align-items:center;
-    justify-content: space-between;
-    background: black;
-    */
+.container-fluid, .container, .row{ padding: 0; margin: 0 auto; }
+p{
+	font-size: 0.9rem;
+	padding: 0;
+	margin: 0;
+}
+h1{
+	color: #366ab0;
+	font-size: 2.4rem;
+	font-weight: bold;
+	line-height: 50px;
+	text-transform: uppercase; 
+	letter-spacing: 0.1px;
 }
 
-.menu-header{
-
+h3{ 
+	color: #333;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-size: 1.1rem;
+	opacity: 0.5; 
 }
 
-.menu-header ul{ 
+/* HEADER */
+header{
+	width: 100%;
+	background: #FFF;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	color: #333;
+	-webkit-box-shadow: 0px 3px 5px -2px rgba(0,0,0,0.66);
+	-moz-box-shadow: 0px 3px 5px -2px rgba(0,0,0,0.66);
+	box-shadow: 0px 3px 5px -2px rgba(0,0,0,0.66); 
 }
 
 
-.menu-header ul li{
-    
+/* ACTION MENU MOBILE*/
+.action-mobi{
+	display: none; 
+}
+.ativar-block{
+	display: block !important;
+}
+ 
+
+/* SUB MENU */
+.submenu{ 
+	display: none;
+	width: 100%;
+	background: #D2D4D8; 
+	margin-top: 90px; 
+	z-index: 99;   
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;  
+	padding: 20px 0;
+	
+    -webkit-box-shadow: -2px 10px 17px -14px rgba(0,0,0,0.77);
+    -moz-box-shadow: -2px 10px 17px -14px rgba(0,0,0,0.77);
+    box-shadow: -2px 10px 17px -14px rgba(0,0,0,0.77);
+}
+	.submenu h4{
+		color: #333;
+		font-weight: bold;
+		font-size: 15px;
+		padding: 15px 0;
+		border-bottom: 1px solid #CCC;
+		margin-bottom: 15px;
+	}
+		.submenu ul{ padding-left: 15px }
+			.submenu ul li{
+				list-style: disc;
+				font-size: 13px;
+				margin-bottom: 8px;
+				padding-left: 15px
+			 }		
+
+.container-header{ }
+
+	.logo{}
+		.logo img{
+			height: 50px;
+		}
+
+	.dropdown{  }
+		.dropdown a{
+			color: #333;
+			font-weight: bold;
+			font-size: 13px;
+			padding: 35px 0;
+		}
+	
+	.menu-header{}	
+		.menu-header ul{}	
+			.menu-header ul li{}
+				.menu-header ul li a{
+					color: #333;
+					padding: 10px 25px;
+					font-size: 13px;
+					opacity: .8;
+				}
+				.menu-header ul li a:hover{
+					opacity: 1;
+				}		
+				.tel-header{  
+				}
+				.tel-header i{
+					color: #82C91E;
+					margin-right: 5px; 
+				}
+
+				.btn-header{
+					background: #366ab0;
+					color: #FFF !important;
+					border-radius: 5px;
+					font-weight: bold;
+				}
+
+
+ 
+/* BANNER */
+
+.banner{
+	margin-top: 90px;
 }
 
+
+
+/* PRODUTOS HOME */
+.produtos-home{
+
+}
+	.produtos-home h3{
+		border-left: 2px solid #DDD;
+		padding-left: 10px; 
+	}
+
+.cover-image{
+	overflow: hidden;
+	height: 180px;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}  
+
+
+
+
+/* SOBRE NOS */
+
+.sobre-nos{}
+	.sobre-nos h3{
+		border-bottom: 1px solid #CCC;
+		padding-bottom: 10px;
+		margin-bottom: 25px;
+	}
+
+.list-opc{
+	margin-bottom: 20px;
+	flex-direction: row;
+} 
+ 
+
+.img-title{
+	background: #366AB0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 20px;
+	margin-right: 20px; 
+}
+	.img-title i{color: #FFF; }	
+
+.txt-infor{
+	padding-top: 5px;
+}
+	.txt-infor span{
+		margin-bottom: 5px;
+		font-weight: bold;
+		font-size: 18px;
+	}
+
+/* paralax box */
+.pele-vidro{
+	background: url('../img/produtos/Pele-de-Vidro-Fachada-1.jpg') fixed;
+	position: relative;
+	padding: 180px 0; 
+	 
+	align-items: center;
+	text-align: center; 
+}
+
+	.pele-vidro h1{
+		color: #FFF;
+	}
+	.pele-vidro p{
+		color: #FFF;
+		opacity: .5;
+		margin-bottom: 50px;
+	}
+	.pele-vidro a{
+		background: #366ab0;
+		color: #FFF;
+		border-radius: 5px;
+		font-weight: bold;
+		padding: 10px 25px; 
+	}
+	.pele-vidro a:hover{
+		opacity: .5;
+	}
+
+.prop-box{ 
+	background: url('../img/produtos/box.jpg') fixed;
+	position: relative;
+	padding: 180px 0; 
+	 
+	align-items: center;
+	text-align: center; 
+}
+	.prop-box h1{
+		color: #FFF;
+	}
+	.prop-box p{
+		color: #FFF;
+		opacity: .5;
+		margin-bottom: 50px;
+	}
+	.prop-box a{
+		background: #366ab0;
+		color: #FFF;
+		border-radius: 5px;
+		font-weight: bold;
+		padding: 10px 25px; 
+	}
+	.prop-box a:hover{
+		opacity: .5;
+	}
+
+
+
+/* FORNECEDORES */
+
+.fornecedores{
+	text-align: center;
+}
+.fornecedores .col-4{
+	border: 1px solid #CCC;
+	border-radius: 5px;
+	padding: 50px 0; 
+}
+	 
+.fornecedores .col-4 img{
+	height: 100px;
+}
+	.fornecedores .col-4 img:hover{ opacity: .5;}	
+
+
+/* FOOTER */	
+footer{
+	background: #366ab0; 
+	
+}
+
+.container-footer{
+	padding: 15px 0;
+}
+	.container-footer p, a{
+		color: #FFF;  
+	}
+	.container-footer a{
+		font-weight: bold; 
+	}
+	.container-footer a:hover{
+		opacity: .5; 
+		color: #FFF;  
+	}
 
 
 // Extra small devices (portrait phones, less than 576px)
@@ -49,4 +295,8 @@ a{ text-decoration: none; }
 @media (max-width: 991.98px) { ... }
 
 // Large devices (desktops, less than 1200px)
-@media (max-width: 1199.98px) { ... }
+@media (max-width: 1199.98px) { 
+	.action-mobi{
+		display:none;
+	}
+ }
