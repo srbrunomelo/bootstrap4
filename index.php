@@ -3,326 +3,325 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
-    <title>Bootstrap 4</title>
+    <title>LokaEasy</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">  
     <link rel="stylesheet" href="css/desktop.css">  
     <link rel="stylesheet" href="css/mobile.css">  
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/0672143d1d.js"></script>
-
-    <script src="js/jquery-1.9.0.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/dataTables.bootstrap4.min.css"> 
+    <link rel="stylesheet" href="css/azzara.css"> 
+    
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0672143d1d.js"></script> 
 </head>
-<body>
-
- 
-
-    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Solicitar Orçamento</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
+<body> 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col nav-user fixed-top">
+                <div class="icon-logo">
+                    <img src="img/icon-lokaeasy.png" alt="">
                 </div>
-                <div class="modal-body">
-                    <form action="" method="">
-                        <div class="form-group">
-                            <label for="nome" class="col-form-label">Nome:</label>
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="nome" class="col-form-label">Email:</label>
-                            <input type="email" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="nome" class="col-form-label">Telefone:</label>
-                            <input type="tel" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="nome" class="col-form-label">Mensagem:</label>
-                            <textarea class="form-control"></textarea>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-primary">Enviar </button>
-                        </div>
-                    </form>
+                <div class="notification">
+                    <i class="fas fa-file-invoice-dollar mr-4"></i>
+                </div>
+                <div class="footer-nav-user">
+                    <i class="fas fa-file-invoice-dollar mr-4"></i>
                 </div>
             </div>
-        </div>
-    </div>
-
- 
- 
-    <header class="container-fluid">
-        <div class="container container-header">
-            <div class="row container-header d-flex align-items-center">
-
-                <div class="col action-mobi">
-                    <a href="#"><i class="fas fa-bars"></i></a>
+            <div class="col navigation fixed-top">
+                <div class="logo pl-5">
+                    <a href="#" id=""><img src="img/logo-lokaeasy.png" alt=""></a>
+                    <span class="action-close hide-navigation"><i class="fas fa-angle-left"></i></span> 
                 </div>
+                <ul class="nav">
+                    <li class="active"><a href="#" id=""><i class="fas fa-chart-line mr-4"></i> Área de Trabalho </a></li>
+                    <li><a href="#" id=""><i class="fas fa-hand-holding-usd mr-4"></i> Locações</a></li>
+                    <li><a href="#" id=""><i class="fas fa-file-invoice-dollar mr-4"></i> Contratos</a></li>
+                    <li><a href="#" id=""><i class="fas fa-chalkboard-teacher mr-4"></i> Serviços </a></li>
+                    <hr style="background:#0746A5">
+                    <li><a href="#" id=""><i class="fas fa-umbrella mr-4"></i> Equipamentos / Bens</a></li>
+                    <li><a href="#" id=""><i class="fas fa-users mr-4"></i> Contatos</a></li>
+                    <hr style="background:#0746A5">
+                    <li><a href="#" id=""><i class="fas fa-cog mr-4"></i> Configurações do LokaEasy</a></li>
+                </ul>
+            </div>
+            <div class="col content">
+
+               <!-- Navbar Header -->
+			<nav class="navbar navbar-header navbar-expand-lg header">
+				
+				<div class="container-fluid">
+					<div class="collapse" id="search-nav">
+						<form class="navbar-left navbar-form nav-search mr-md-3">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<button type="submit" class="btn btn-search pr-1">
+										<i class="fa fa-search search-icon"></i>
+									</button>
+								</div>
+								<input type="text" placeholder="Pesquisar ..." class="form-control">
+							</div>
+						</form>
+					</div>
+					<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+						<li class="nav-item toggle-nav-search hidden-caret">
+							<a class="nav-link" data-toggle="collapse" href="#search-nav" role="button" aria-expanded="false" aria-controls="search-nav">
+								<i class="fa fa-search"></i>
+							</a>
+						</li>
+						<li class="nav-item dropdown hidden-caret">
+							<a class="nav-link dropdown-toggle" href="#" id="messageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fa fa-envelope"></i>
+							</a>
+							<ul class="dropdown-menu messages-notif-box animated fadeIn" aria-labelledby="messageDropdown">
+								<li>
+									<div class="dropdown-title d-flex justify-content-between align-items-center">
+										Messages 									
+										<a href="#" class="small">Mark all as read</a>
+									</div>
+								</li>
+								<li>
+									<div class="message-notif-scroll scrollbar-outer">
+										<div class="notif-center">
+											<a href="#">
+												<div class="notif-img"> 
+													<img src="../assets/img/jm_denis.jpg" alt="Img Profile">
+												</div>
+												<div class="notif-content">
+													<span class="subject">Jimmy Denis</span>
+													<span class="block">
+														How are you ?
+													</span>
+													<span class="time">5 minutes ago</span> 
+												</div>
+											</a>
+											<a href="#">
+												<div class="notif-img"> 
+													<img src="../assets/img/chadengle.jpg" alt="Img Profile">
+												</div>
+												<div class="notif-content">
+													<span class="subject">Chad</span>
+													<span class="block">
+														Ok, Thanks !
+													</span>
+													<span class="time">12 minutes ago</span> 
+												</div>
+											</a>
+											<a href="#">
+												<div class="notif-img"> 
+													<img src="../assets/img/mlane.jpg" alt="Img Profile">
+												</div>
+												<div class="notif-content">
+													<span class="subject">Jhon Doe</span>
+													<span class="block">
+														Ready for the meeting today...
+													</span>
+													<span class="time">12 minutes ago</span> 
+												</div>
+											</a>
+											<a href="#">
+												<div class="notif-img"> 
+													<img src="../assets/img/talha.jpg" alt="Img Profile">
+												</div>
+												<div class="notif-content">
+													<span class="subject">Talha</span>
+													<span class="block">
+														Hi, Apa Kabar ?
+													</span>
+													<span class="time">17 minutes ago</span> 
+												</div>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a class="see-all" href="javascript:void(0);">See all messages<i class="fa fa-angle-right"></i> </a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item dropdown hidden-caret">
+							<a class="nav-link dropdown-toggle" href="#" id="notifDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fa fa-bell"></i>
+								<span class="notification">4</span>
+							</a>
+							<ul class="dropdown-menu notif-box animated fadeIn" aria-labelledby="notifDropdown">
+								<li>
+									<div class="dropdown-title">You have 4 new notification</div>
+								</li>
+								<li>
+									<div class="notif-scroll scrollbar-outer">
+										<div class="notif-center">
+											<a href="#">
+												<div class="notif-icon notif-primary"> <i class="fa fa-user-plus"></i> </div>
+												<div class="notif-content">
+													<span class="block">
+														New user registered
+													</span>
+													<span class="time">5 minutes ago</span> 
+												</div>
+											</a>
+											<a href="#">
+												<div class="notif-icon notif-success"> <i class="fa fa-comment"></i> </div>
+												<div class="notif-content">
+													<span class="block">
+														Rahmad commented on Admin
+													</span>
+													<span class="time">12 minutes ago</span> 
+												</div>
+											</a>
+											<a href="#">
+												<div class="notif-img"> 
+													<img src="../assets/img/profile2.jpg" alt="Img Profile">
+												</div>
+												<div class="notif-content">
+													<span class="block">
+														Reza send messages to you
+													</span>
+													<span class="time">12 minutes ago</span> 
+												</div>
+											</a>
+											<a href="#">
+												<div class="notif-icon notif-danger"> <i class="fa fa-heart"></i> </div>
+												<div class="notif-content">
+													<span class="block">
+														Farrah liked Admin
+													</span>
+													<span class="time">17 minutes ago</span> 
+												</div>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a class="see-all" href="javascript:void(0);">See all notifications<i class="fa fa-angle-right"></i> </a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item dropdown hidden-caret">
+							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
+								<div class="avatar-sm">
+									<img src="https://via.placeholder.com/350x150" alt="..." class="avatar-img rounded-circle">
+								</div>
+							</a>
+							<ul class="dropdown-menu dropdown-user animated fadeIn">
+								<li>
+									<div class="user-box">
+										<div class="avatar-lg"><img src="https://via.placeholder.com/350x150" alt="image profile" class="avatar-img rounded"></div>
+										<div class="u-text">
+											<h4>Hizrian</h4>
+											<p class="text-muted">hello@example.com</p><a href="profile.html" class="btn btn-rounded btn-danger btn-sm">View Profile</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="#">My Profile</a>
+									<a class="dropdown-item" href="#">My Balance</a>
+									<a class="dropdown-item" href="#">Inbox</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="#">Account Setting</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="#">Logout</a>
+								</li>
+							</ul>
+						</li>
+						
+					</ul>
+				</div>
+			</nav>
+			<!-- End Navbar -->
                 
-                <div class="col-xl-3  col-lg-3 col-md-6 logo">
-                    <a href="#"><img src="img/aluplan.png" alt="Aluplan Esquadrias de Alumínio e Vidraçaria na SERRA - ES" title="Aluplan Esquadrias de Alumínio e Vidraçaria na SERRA - ES"></a>
-                </div>
-                <div class="col-xl-3 col-lg-2  col-md-6 dropdown d-flex">
-                    <a href="#" class="active-drop">PRODUTOS E SERVIÇOS  <i class="fas fa-angle-down"></i> </a>
-                </div>
-                <nav class="col-xl-6 col-lg-7 menu-header">
-                    <ul class="nav justify-content-end">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Ultimos Trabalhos</a>
-                        </li> 
-                        <li class="nav-item">
-                            <a target="_blank" href="https://api.whatsapp.com/send?phone=5527997549599&text=Ola%2C%20Preciso%20de%20um%20or%C3%A7amento" class="nav-link tel-header"><i class="fab fa-whatsapp-square"></i> 27 9 9754-9599</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link btn-header" data-toggle="modal" data-target=".bd-example-modal-lg">Solicitar Orçamento</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header> 
-
-    <div class="container-fluid submenu">
-        <div class="container">
-            <div class="row">
-                <div class="col-3"></div>
-                <div class="col-9">
+                <div class="page"> 
                     <div class="row">
-                        <div class="col-4">
-                            <h4>Vidraçaria</h4>
-                            <ul>
-                                <li>Vidros Temperados</li>
-                                <li>Vidros Comum</li>
-                                <li>Vidros Laminados</li>
-                                <li>Espelhos</li>
-                            </ul>
-                        </div>
-                        <div class="col-4">
-                            <h4>Esquadrias de Alumínio</h4>
-                            <ul>
-                                <li>Portas</li>
-                                <li>Portinholas</li>
-                                <li>Portões</li>
-                                <li>Grades</li>
-                                <li>Janelas</li>
-                                <li>Gradil</li>
-                                <li>Fachadas Pele de Vidro</li>
-                            </ul>
-                        </div>
-                        <div class="col-4">
-                            <h4>Manutenções</h4>
-                            <ul>
-                                <li>Manutenções em fachadas</li>
-                                <li>Manutenção em Portas de vidro temperado</li>
-                                <li>Manutenção em portões de alumínio</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <section class="container-fluid banner"> 
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"> 
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li> 
-            </ol> 
-            <div class="carousel-inner"> 
-                <div class="carousel-item active">
-                    <img src="http://www.aluplan.com.br/wp-content/uploads/2017/09/ban01.jpg" class="d-block w-100" alt="...">
-                </div>  
-                <div class="carousel-item">
-                    <img src="http://www.aluplan.com.br/wp-content/uploads/2017/09/ban01.jpg" class="d-block w-100" alt="...">
+                        <div class="col-sm-6 col-md-3">
+							<div class="card card-stats card-round">
+								<div class="card-body">
+									<div class="row align-items-center">
+										<div class="col-icon">
+											<div class="icon-big text-center icon-success bubble-shadow-small">
+												<i class="far fa-chart-bar"></i>
+											</div>
+										</div>
+										<div class="col col-stats ml-3 ml-sm-0">
+											<div class="numbers">
+												<p class="card-category">Vendas</p>
+												<h4 class="card-title">R$ 5.520,00</h4>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-3">
+							<div class="card card-stats card-round">
+								<div class="card-body ">
+									<div class="row align-items-center">
+										<div class="col-icon">
+											<div class="icon-big text-center icon-primary bubble-shadow-small">
+												<i class="fas fa-users"></i>
+											</div>
+										</div>
+										<div class="col col-stats ml-3 ml-sm-0">
+											<div class="numbers">
+												<p class="card-category">Visitors</p>
+												<h4 class="card-title">1,294</h4>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-3">
+							<div class="card card-stats card-round">
+								<div class="card-body">
+									<div class="row align-items-center">
+										<div class="col-icon">
+											<div class="icon-big text-center icon-info bubble-shadow-small">
+												<i class="far fa-newspaper"></i>
+											</div>
+										</div>
+										<div class="col col-stats ml-3 ml-sm-0">
+											<div class="numbers">
+												<p class="card-category">Subscribers</p>
+												<h4 class="card-title">1303</h4>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-sm-6 col-md-3">
+							<div class="card card-stats card-round">
+								<div class="card-body">
+									<div class="row align-items-center">
+										<div class="col-icon">
+											<div class="icon-big text-center icon-secondary bubble-shadow-small">
+												<i class="far fa-check-circle"></i>
+											</div>
+										</div>
+										<div class="col col-stats ml-3 ml-sm-0">
+											<div class="numbers">
+												<p class="card-category">Order</p>
+												<h4 class="card-title">576</h4>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div> 
                 </div> 
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div> 
-    </section> 
-
-    <section class="container-fluid mt-5 mb-5"> 
-        <div class="container">
-            <div class="row ">
-                <div class="col-12"> 
-                    <h1 class="text-center">Alto padrão em Vidros</h1>
-                    <p class="text-center">Produtos de alta qualidade em vidros temperados</p>
-                </div>
-            </div>
-        </div>  
-    </section>
- 
-    <section class="container-fluid mt-5 mb-5">
-        <div class="container">
-            <div class="row produtos-home">
-                <div class="col-4">
-                    <h3 class="mb-3">Vidros Temperados</h3>
-                    <div class="cover-image">
-                        <img class="img-fluid" src="img/produtos/janela.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col-4">
-                    <h3 class="mb-3">Esquadrias de Alumínio</h3>
-                    <div class="cover-image">
-                        <img class="img-fluid" src="img/produtos/porta.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col-4">
-                    <h3 class="mb-3">Portão de Garagem</h3>
-                    <div class="cover-image">
-                        <img class="img-fluid" src="img/produtos/portao.jpg" alt="">
-                    </div>
-                </div>
-            </div>  
-        </div> 
-    </section> 
-
-
-    <section class="container-fluid prop-box d-flex  mt-5 mb-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h1>Box de Vidro Temperado</h1>
-                    <P>Fácil de limpar, capaz de economizar espaço e muito bonito</P> 
-                    <a href="#">Solicitar Orçamento</a>
-                </div>
-            </div> 
         </div>
-    </section>
+    </div>
 
+<script src="js/jquery-1.9.0.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
 
+<script src="componentes/data_table/jquery.dataTables.min.js"></script>
+<script src="componentes/data_table/dataTables.bootstrap4.min.js"></script>
 
-
-
-
-    <section class="container-fluid d-flex mt-5 mb-5 sobre-nos">
-        <div class="container">
-            <div class="row">
-                <div class="col-8">
-                    <h3>Sobre nós</h3>
-                    <p>
-                    A Aluplan é uma empresa que projeta, fabrica e instala esquadrias e fachadas de alumínio para aplicação em diferentes projetos, sejam residenciais, comerciais, corporativos ou especiais.
-                    <br><br>
-                    Para a Aluplan, a realização esta em transformar projetos em realidade, e assim contribuir para a total satisfação de nossos clientes.
-                    <br><br>
-                    As esquadrias de alumínio da Aluplan utilizam acessórios e acabamentos de última geração.
-                    <br><br>
-                    Possuindo como meta empresarial sempre desenvolver suas atividades com a melhor qualidade e melhor profissionalismo.
-                    <br><br>
-                    A empresa coloca a disposição de seus clientes a produção de esquadrias, portões, portas, janelas, fachadas, pele de vidro, grades, basculantes, entre outros produtos.
-                    </p>
-                </div>
-                <div class="col-4">
-                    <h3>Atendimento</h3>
-
-                    <div class="list-opc d-flex">
-                        <div class="img-title"><i class="fas fa-phone-square"></i></div>
-                        <div class="txt-infor">
-                            <span>Telefone</span>
-                            <p>27 9 9754-9599 (VIVO)</p>
-                        </div>
-                    </div>
-
-                    <div class="list-opc d-flex">
-                        <div class="img-title"><i class="far fa-envelope"></i></div>
-                        <div class="txt-infor">
-                            <span>E-mail</span> 
-                            <p>contato<i class="fas fa-at"></i>aluplan.com.br</p>
-                        </div>
-                    </div> 
-
-                    <div class="list-opc d-flex">
-                        <div class="img-title"><i class="fas fa-map-marker-alt" style="padding-left:5px;"></i></div>
-                        <div class="txt-infor">
-                            <span>Onde Atuamos</span>
-                            <p>
-                            - Serra <br>
-                            - Vitória <br>
-                            - Vila Velha <br>
-                            - Cariacica <br>
-                            </p>
-                        </div>
-                    </div>
- 
-                    
-                </div>
-            </div>
-        </div>
-    </section> 
-
-
-
-
-    <section class="container-fluid pele-vidro d-flex  mt-5 mb-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h1>fachada Pele de vidro</h1>
-                    <P>fachada fica totalmente envidraçada, adquirindo visual leve e limpo</P> 
-                    <a href="#">Solicitar Orçamento</a>
-                </div>
-            </div> 
-        </div>
-    </section>
-
-
-
-
-    <section class="container-fluid mt-5 mb-5"> 
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-12"> 
-                    <h1 class="text-center">fornecedores</h1>
-                    <p class="text-center">Trabalhamos com as melhores marcas do mercado</p>
-                </div>
-            </div>
-            <div class="row fornecedores d-flex">
-                <div class="col-4">
-                    <img src="img/marcas/al.png" alt=""  title="">
-                </div>
-                <div class="col-4">
-                    <img src="img/marcas/viminas.png" alt=""  title="">
-                </div>
-                <div class="col-4">
-                    <img src="img/marcas/perfil.png" alt=""  title="">
-                </div>
-            </div>
-        </div>  
-    </section>
-
-
-
-    <footer class="container-fluid d-flex">
-        <div class="container">
-            <div class="row container-footer d-flex">
-                <div class="col-6">
-                   <p>Todos Direitos Reservados</p>
-                </div>
-                <div class="col-6 text-right">
-                    <p>Desenvolvido por: <a target="_blank" href="https://www.behance.net/srbrunomelo">Bruno Melo</a></p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-   
-    
 </body>
 </html>
